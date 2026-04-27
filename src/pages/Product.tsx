@@ -8,10 +8,7 @@ const { Title, Text } = Typography;
 export default function Product() {
     const { id } = useParams();
     const products = useStore((state: any) => state.products);
-
-    const product = products.find(
-        (p: any) => p.id === Number(id)
-    );
+    const product = products.find((p: any) => p.id === Number(id));
 
     if (!product) return <Title>Не найдено</Title>;
 
@@ -24,9 +21,9 @@ export default function Product() {
             <Card title={product.name}>
                 <Title level={3}>Детальная информация</Title>
                 <Text>Категория: {product.category}</Text>
-                <br />
+                <br/>
                 <Text>Цена: {product.price}₽</Text>
-                <br />
+                <br/>
                 <Text>Продажи: {product.sales}</Text>
             </Card>
         </motion.div>

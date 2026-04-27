@@ -18,7 +18,6 @@ export default function Layout() {
                     </Menu.Item>
                 </Menu>
             </Header>
-
             <Content className="content">
                 <motion.div
                     initial={{ opacity: 0 }}

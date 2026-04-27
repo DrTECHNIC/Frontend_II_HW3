@@ -15,12 +15,10 @@ export default function ProductCard({ product }: any) {
         >
             <Card title={product.name}>
                 <Text>Цена: {product.price}₽</Text>
-                <br />
+                <br/>
                 <Text>Продажи: {product.sales}</Text>
-                <br />
-                <Link to={`/dashboard/product/${product.id}`}>
-                    Подробнее
-                </Link>
+                <br/>
+                <Link to={`/dashboard/product/${product.id}`}>Подробнее</Link>
             </Card>
         </motion.div>
     );

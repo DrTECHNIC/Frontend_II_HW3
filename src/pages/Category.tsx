@@ -8,10 +8,7 @@ const { Title } = Typography;
 export default function Category() {
     const { category } = useParams();
     const products = useStore((state: any) => state.products);
-
-    const filtered = products.filter(
-        (p: any) => p.category === category
-    );
+    const filtered = products.filter((p: any) => p.category === category);
 
     return (
         <>

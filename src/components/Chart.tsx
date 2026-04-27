@@ -12,15 +12,12 @@ export function SalesBarChart({ data }: any) {
             option={{
                 title: { text: "Продажи по товарам" },
                 tooltip: { trigger: "axis" },
-
                 xAxis: {
                     type: "category",
                     data: data.map((i: any) => i.name),
                     axisLabel: { show: false},
                 },
-
                 yAxis: { type: "value" },
-
                 series: [
                     {
                         type: "bar",
@@ -33,13 +30,7 @@ export function SalesBarChart({ data }: any) {
                         })),
                     },
                 ],
-
-                grid: {
-                    top: 60,
-                    bottom: 20,
-                    left: 30,
-                    right: 10,
-                },
+                grid: {top: 60, bottom: 20, left: 30, right: 10}
             }}
         />
     );
@@ -51,7 +42,6 @@ export function SalesPieChart({ data }: any) {
             style={{ height: "100%", width: "100%" }}
             option={{
                 title: { text: "Доли продаж", left: "center" },
-
                 tooltip: {
                     trigger: "item",
                     formatter: (p: any) => `
@@ -60,40 +50,26 @@ export function SalesPieChart({ data }: any) {
             Доля: ${p.percent}%
           `,
                 },
-
                 series: [
                     {
                         type: "pie",
-
                         top: 20,
                         bottom: 10,
-
-                        radius: ["45%", "80%"], // увеличили
-
+                        radius: ["45%", "80%"],
                         label: { show: false },
                         labelLine: { show: false },
-
                         data: data.map((i: any) => ({
                             value: i.sales,
                             name: i.name,
-                            itemStyle: {
-                                color: getColorById(i.id),
-                            },
+                            itemStyle: {color: getColorById(i.id)},
                         })),
-
                         emphasis: {
                             scale: true,
                             scaleSize: 12,
                         },
                     },
                 ],
-
-                grid: {
-                    top: 60,
-                    bottom: 20,
-                    left: 30,
-                    right: 10,
-                },
+                grid: {top: 60, bottom: 20, left: 30, right: 10}
             }}
         />
     );
@@ -106,15 +82,12 @@ export function RevenueChart({ data }: any) {
             option={{
                 title: { text: "Выручка по товарам" },
                 tooltip: { trigger: "axis" },
-
                 xAxis: {
                     type: "category",
                     data: data.map((i: any) => i.name),
                     axisLabel: { show: false},
                 },
-
                 yAxis: { type: "value" },
-
                 series: [
                     {
                         type: "bar",
@@ -127,13 +100,7 @@ export function RevenueChart({ data }: any) {
                         })),
                     },
                 ],
-
-                grid: {
-                    top: 60,
-                    bottom: 20,
-                    left: 30,
-                    right: 10,
-                },
+                grid: {top: 60, bottom: 20, left: 30, right: 10}
             }}
         />
     );
@@ -144,11 +111,7 @@ export function CategoryBarChart({ data }: any) {
 
     data.forEach((item: any) => {
         const category = item.category.trim().toLowerCase(); // 👈 нормализация
-
-        if (!grouped[category]) {
-            grouped[category] = 0;
-        }
-
+        if (!grouped[category]) {grouped[category] = 0;}
         grouped[category] += item.sales;
     });
 
@@ -164,15 +127,12 @@ export function CategoryBarChart({ data }: any) {
             option={{
                 title: { text: "Продажи по категориям" },
                 tooltip: { trigger: "axis" },
-
                 xAxis: {
                     type: "category",
                     data: categories,
                     axisLabel: { show: false},
                 },
-
                 yAxis: { type: "value" },
-
                 series: [
                     {
                         type: "bar",
@@ -185,13 +145,7 @@ export function CategoryBarChart({ data }: any) {
                         })),
                     },
                 ],
-
-                grid: {
-                    top: 60,
-                    bottom: 20,
-                    left: 30,
-                    right: 10,
-                },
+                grid: {top: 60, bottom: 20, left: 30, right: 10}
             }}
         />
     );
