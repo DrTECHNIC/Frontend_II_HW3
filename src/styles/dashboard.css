@@ -1,0 +1,116 @@
+.section {
+    margin-top: 40px;
+    overflow: visible;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.charts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: visible;
+    width: 100%;
+}
+
+.chart-block {
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chart-block .ant-card-body {
+    height: 100%;
+    padding: 8px;
+    display: flex;
+}
+
+.sticky-legend {
+    position: sticky;
+    top: 12px;
+    z-index: 100;
+
+    background: #fff;
+}
+
+.legend-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 14px;
+}
+
+.legend-card.compact {
+    border-radius: 12px;
+}
+
+.legend-item.compact {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-color {
+    display: inline-block; /* 👈 КЛЮЧ */
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.legend-text {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .chart-block {
+        height: 260px;
+        padding: 8px;
+    }
+
+    .charts {
+        gap: 14px;
+    }
+
+    .section {
+        margin-top: 24px;
+    }
+
+    /* легенда компактнее */
+    .legend-card.compact {
+        padding: 6px 8px;
+        gap: 6px 10px;
+    }
+
+    .legend-text {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 768px) {
+    .legend-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 4px;
+    }
+
+    .legend-item {
+        flex-shrink: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .sticky-legend {
+        top: 0;
+    }
+}

@@ -1,0 +1,67 @@
+export const data = {
+    products: [
+        {
+            id: 1,
+            name: "Ноутбук Lenovo IdeaPad",
+            category: "техника",
+            price: 84999,
+            sales: 45,
+        },
+        {
+            id: 2,
+            name: "Смартфон Samsung Galaxy",
+            category: "техника",
+            price: 64999,
+            sales: 70,
+        },
+        {
+            id: 3,
+            name: "Наушники Sony WH-1000XM4",
+            category: "техника",
+            price: 24999,
+            sales: 55,
+        },
+        {
+            id: 4,
+            name: "Кроссовки Nike Air Max",
+            category: "одежда",
+            price: 23999,
+            sales: 90,
+        },
+        {
+            id: 5,
+            name: "Джинсы Levi's",
+            category: "одежда",
+            price: 2999,
+            sales: 60,
+        },
+        {
+            id: 6,
+            name: "Футболка Adidas",
+            category: "одежда",
+            price: 2999,
+            sales: 110,
+        },
+        {
+            id: 7,
+            name: "Кофеварка Philips",
+            category: "бытовая техника",
+            price: 20999,
+            sales: 35,
+        },
+        {
+            id: 8,
+            name: "Микроволновая печь LG",
+            category: "бытовая техника",
+            price: 18999,
+            sales: 40,
+        },
+        {
+            id: 9,
+            name: "Игровая мышь Logitech",
+            category: "аксессуары",
+            price: 3999,
+            sales: 75,
+        },
+    ],
+};
